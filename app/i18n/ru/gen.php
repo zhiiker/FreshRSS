@@ -12,24 +12,37 @@
 
 return array(
 	'action' => array(
-		'actualize' => 'Актуализировать ленту',
+		'actualize' => 'Обновить ленту',
 		'add' => 'Добавить',
-		'back' => '← Вернуться',
 		'back_to_rss_feeds' => '← Вернуться к вашим RSS-лентам',
 		'cancel' => 'Отменить',
 		'create' => 'Создать',
+		'delete_all_feeds' => 'Delete all feeds',	// TODO
+		'delete_errored_feeds' => 'Delete feeds with errors',	// TODO
+		'delete_muted_feeds' => 'Удалить заглушенные ленты',
 		'demote' => 'Понизить',
 		'disable' => 'Отключить',
-		'empty' => 'Пусто',
+		'download' => 'Download',	// TODO
+		'empty' => 'Опустошить',
 		'enable' => 'Включить',
 		'export' => 'Экспортировать',
-		'filter' => 'Фильтровать',
+		'filter' => 'Отфильтровать',
 		'import' => 'Импортировать',
 		'load_default_shortcuts' => 'Загрузить горячие клавиши по умолчанию',
 		'manage' => 'Настроить',
 		'mark_read' => 'Отметить прочитанным',
+		'menu' => array(
+			'open' => 'Open menu',	// TODO
+		),
+		'nav_buttons' => array(
+			'next' => 'Next article',	// TODO
+			'prev' => 'Previous article',	// TODO
+			'up' => 'Go up',	// TODO
+		),
+		'open_url' => 'Открыть URL',
 		'promote' => 'Продвинуть',
 		'purge' => 'Запустить очистку',
+		'refresh_opml' => 'Обновить OPML',
 		'remove' => 'Удалить',
 		'rename' => 'Переименовать',
 		'see_website' => 'Посмотреть на сайте',
@@ -62,7 +75,7 @@ return array(
 		'Aug' => '\\а\\в\\г\\у\\с\\т\\а',
 		'Dec' => '\\д\\е\\к\\а\\б\\р\\я',
 		'Feb' => '\\ф\\е\\в\\р\\а\\л\\я',
-		'Jan' => '\\я\\н\\в\\а\\р\\я\\y',
+		'Jan' => '\\я\\н\\в\\а\\р\\я',
 		'Jul' => '\\и\\ю\\л\\я',
 		'Jun' => '\\и\\ю\\н\\я',
 		'Mar' => '\\м\\а\\р\\т\\а',
@@ -98,8 +111,8 @@ return array(
 		'last_year' => 'Последний год',
 		'mar' => 'мар',
 		'march' => 'марта',
-		'may' => 'май',
-		'may_' => 'мая',
+		'may' => 'мая',
+		'may_' => 'май',
 		'mon' => 'Пн',
 		'month' => 'месяцы',
 		'nov' => 'ноя',
@@ -131,20 +144,27 @@ return array(
 			'request_failed' => 'Запрос не удался. Возможно, это вызвано проблемами с подключением к Интернет.',
 			'title_new_articles' => 'FreshRSS: новые статьи!',
 		),
+		'labels_empty' => 'Нет меток',
 		'new_article' => 'Появились новые статьи. Нажмите, чтобы обновить страницу.',
 		'should_be_activated' => 'JavaScript должен быть включён',
 	),
 	'lang' => array(
-		'cz' => 'Čeština',	// IGNORE
+		'cs' => 'Čeština',	// IGNORE
 		'de' => 'Deutsch',	// IGNORE
+		'el' => 'Ελληνικά',	// IGNORE
 		'en' => 'English',	// IGNORE
 		'en-us' => 'English (United States)',	// IGNORE
 		'es' => 'Español',	// IGNORE
+		'fa' => 'فارسی',	// IGNORE
+		'fi' => 'Suomi',	// IGNORE
 		'fr' => 'Français',	// IGNORE
 		'he' => 'עברית',	// IGNORE
+		'hu' => 'Magyar',	// IGNORE
+		'id' => 'Bahasa Indonesia',	// IGNORE
 		'it' => 'Italiano',	// IGNORE
 		'ja' => '日本語',	// IGNORE
 		'ko' => '한국어',	// IGNORE
+		'lv' => 'Latviešu',	// IGNORE
 		'nl' => 'Nederlands',	// IGNORE
 		'oc' => 'Occitan',	// IGNORE
 		'pl' => 'Polski',	// IGNORE
@@ -153,6 +173,7 @@ return array(
 		'sk' => 'Slovenčina',	// IGNORE
 		'tr' => 'Türkçe',	// IGNORE
 		'zh-cn' => '简体中文',	// IGNORE
+		'zh-tw' => '正體中文',	// IGNORE
 	),
 	'menu' => array(
 		'about' => 'О проекте',
@@ -164,23 +185,19 @@ return array(
 		'configuration' => 'Конфигурация',
 		'display' => 'Отображение',
 		'extensions' => 'Расширения',
-		'logs' => 'Логи',
+		'logs' => 'Журнал',
+		'privacy' => 'Privacy',	// TODO
 		'queries' => 'Пользовательские запросы',
 		'reading' => 'Чтение',
 		'search' => 'Искать слова или #теги',
-		'sharing' => 'Поделиться',
+		'search_help' => 'Дополнительные <a href="https://freshrss.github.io/FreshRSS/en/users/10_filter.html#with-the-search-field" target="_blank">параметры поиска</a> приведены в документации',
+		'sharing' => 'Обмен',
 		'shortcuts' => 'Горячие клавиши',
 		'stats' => 'Статистика',
 		'system' => 'Системные настройки',
 		'update' => 'Обновление системы',
 		'user_management' => 'Управление пользователями',
 		'user_profile' => 'Профиль',
-	),
-	'pagination' => array(
-		'first' => 'Первая',
-		'last' => 'Последняя',
-		'next' => 'Следующая',
-		'previous' => 'Предыдущая',
 	),
 	'period' => array(
 		'days' => 'дней',
@@ -191,25 +208,38 @@ return array(
 	),
 	'share' => array(
 		'Known' => 'Сайты на Known',
-		'blogotext' => 'Blogotext',	// IGNORE
+		'archiveIS' => 'archive.is',	// IGNORE
+		'archiveORG' => 'archive.org',	// IGNORE
+		'archivePH' => 'archive.ph',	// IGNORE
+		'bluesky' => 'Bluesky',	// TODO
+		'buffer' => 'Buffer',	// IGNORE
 		'clipboard' => 'Буфер обмена',
 		'diaspora' => 'Diaspora*',	// IGNORE
 		'email' => 'Электронная почта',
+		'email-webmail-firefox-fix' => 'Электронная почта (webmail - правка для Firefox)',
 		'facebook' => 'Facebook',	// IGNORE
 		'gnusocial' => 'GNU social',	// IGNORE
 		'jdh' => 'Journal du hacker',	// IGNORE
 		'lemmy' => 'Lemmy',	// IGNORE
+		'linkding' => 'Linkding',	// IGNORE
 		'linkedin' => 'LinkedIn',	// IGNORE
 		'mastodon' => 'Mastodon',	// IGNORE
 		'movim' => 'Movim',	// IGNORE
+		'omnivore' => 'Omnivore',	// IGNORE
 		'pinboard' => 'Pinboard',	// IGNORE
+		'pinterest' => 'Pinterest',	// IGNORE
 		'pocket' => 'Pocket',	// IGNORE
 		'print' => 'Распечатать',
 		'raindrop' => 'Raindrop.io',	// IGNORE
+		'reddit' => 'Reddit',	// IGNORE
 		'shaarli' => 'Shaarli',	// IGNORE
+		'telegram' => 'Telegram',	// IGNORE
 		'twitter' => 'Twitter',	// IGNORE
 		'wallabag' => 'wallabag v1',	// IGNORE
 		'wallabagv2' => 'wallabag v2',	// IGNORE
+		'web-sharing-api' => 'Системный обмен',
+		'whatsapp' => 'Whatsapp',	// IGNORE
+		'xing' => 'Xing',	// IGNORE
 	),
 	'short' => array(
 		'attention' => 'Предупреждение!',

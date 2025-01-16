@@ -6,7 +6,21 @@ FreshRSS is updated by the `./app/actualize_script.php` script. Knowing this, we
 
 **Note:** the following examples assume that FreshRSS is installed to `/usr/share/FreshRSS`. You’ll need to modify the FreshRSS path to reflect your own system.
 
-**Note:** If you cannot configure a local Cronjob, [see an alternative using online cron](../users/03_Main_view.md#online-cron).
+**Note:** If you cannot configure a local Cronjob, [see an alternative using online cron](../users/09_refreshing_feeds.md#online-cron).
+
+## Cron inside the FreshRSS Docker image
+
+Easiest, built-in solution, also used already in the examples above
+(but your Docker instance will have a second process in the background, without monitoring).
+Just pass the environment variable `CRON_MIN` to your `docker run` command,
+containing a valid cron minute definition such as `'13,43'` (recommended) or `'*/20'`.
+Not passing the `CRON_MIN` environment variable – or setting it to empty string – will disable the cron daemon.
+
+```sh
+docker run ... \
+  -e 'CRON_MIN=13,43' \
+  --name freshrss freshrss/freshrss
+```
 
 ## Cron as a trigger
 
